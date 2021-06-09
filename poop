@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script>
+      alert(Read Me!);
+    </script>
+    <style>
+      body{color:white;}
+      background{color:black;}
+    </style>
+  </head>
+  <body>
+    <h1>
+      SHIT
+    </h1>
+    <p>
+      fuck
+    </p>
+  </body>
+</html>
