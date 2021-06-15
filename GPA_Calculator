@@ -1,12 +1,25 @@
 <html>
   <head>
     <script>
-    function GPA
+    var Grades= 0;
+    var Courses=0;
+    var A=4;
+    var B=3;
+    var C=2;
+    var D=1;
+    var F=0;
+    var gpa= 0;
+    
+    function a(x,y) 
     {
-    
-    
+    Grades=Grades+A
+    Courses++
     }
     
+    function GPA
+    {
+    alert("Your GPA is "+(Grades/Courses));
+    }
     
     
     </script>
