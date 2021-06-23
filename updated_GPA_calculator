@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+    
+    var courses=0
+    var grades=0
+    var gpa=0
+    var A=4
+    var B=3
+    var C=2
+    var D=1
+    var F=0
+    
+    function GPA(x)
+    {
+    grades=grades+x
+    courses++
+    gpa=grades/courses
+    alert("Your GPA is"+" "+gpa)
+    }
+    
+    </script>
+  </head>
+  <body>
+  <h1>GPA calculator</h1>
+  <button type="button" onclick="GPA(A)">A</button>
+  <button type="button" onclick="GPA(B)">B</button>
+  <button type="button" onclick="GPA(C)">C</button>
+  <button type="button" onclick="GPA(D)">D</button>
+  <button type="button" onclick="GPA(D)">F</button>
+  </body>
+</html>
