@@ -7,6 +7,11 @@
       {
         tmp=document.getElementById("makeGreen");//it assigns the id makeGreen to tmp
         tmp.style.color="blue";//this changes the makeGreen ID to blue
+        tmp=document.getElementByName("blue"); //
+        tmp.style.color="red";//this changes the element name blue to red
+        tmp=document.getElementByClass("red");//
+        tmp.style.color="green";// this changes the element class red to green
+                                   
       }
     </script>
   </head>
@@ -20,7 +25,7 @@
     </p>
                      
     <button onclick="changeColor()">//this calls the function changeColor
-      TURN IT GREEN
+      TURN EVERYTHING GREEN
     </button>
                                    
     <p class="red">
