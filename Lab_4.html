@@ -5,13 +5,8 @@
     <script>
       function changeColor()
       {
-        tmp=document.getElementById("makeGreen");//it assigns the id makeGreen to tmp
-        tmp.style.color="blue";//this changes the makeGreen ID to blue
-        dck=document.getElementByName("blue"); //
-        dck.style.color="red";//this changes the element name blue to red
-        eta=document.getElementByClass("red");//
-        eta.style.color="green";// this changes the element class red to green
-                                   
+        tmp=document.getElementById("makeGreen"); //it assigns the id makeGreen to tmp
+        tmp.style.color="blue"; //this changes the makeGreen ID to blue
       }
     </script>
   </head>
@@ -31,6 +26,11 @@
     <p class="red">
        another random paragraph
     </p>
+    
+    <p id="makeGreen" name="purple">
+       this may turn red
+    </p>
+                  
                   
   </body>
 </html>
