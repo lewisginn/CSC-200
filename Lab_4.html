@@ -5,8 +5,8 @@
     <script>
       function changeColor()
       {
-        tmp=document.getElementById("makeGreen");
-        tmp.style.color="blue";                        
+        tmp=document.getElementById("makeGreen");//it assigns the id makeGreen to tmp
+        tmp.style.color="blue";//this changes the makeGreen ID to blue
       }
     </script>
   </head>
@@ -14,7 +14,7 @@
     <p id="makeGreen">
       This is gonna turn green watch
     </p>
-    <button onclick="changeColor()">
+    <button onclick="changeColor()">//this calls the function changeColor
       TURN IT GREEN
     </button>
     
