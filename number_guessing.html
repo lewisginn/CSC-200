@@ -3,38 +3,58 @@
     <style>
     </style>
     <script>
+      var number;
+      var attempts=0;
+      function randomNumber()
+      {
+      number=Math.floor(Math.random()*101);
+      }
+
       function guessTheNumber()
       {
-        var number=Math.floor(Math.random()*101);
-        var textTag = document.getElementById;
+        attempts++;
+        var textTag = document.getElementById("usersays");
         var text = textTag.value;
        
         if(text==number)
         {
           alert("CONGRGATS!");
           var output=document.getElementById("myGuesses");
-          output.innerHTML += "The answer was" +" "+ text+"<br>";
-        }
-        else if(text>number)
-        {
-          alert("You're a little low");
-          var output=document.getElementById("myGuesses");
-          output.innerHTML += "less than" +" "+ text+"<br>";
+          output.innerHTML += attempts + "."+ "The answer was" +" "+ text+"<br>";
+          window.location.reload(true);
         }
         else if(text<number)
         {
+          alert("You're a little low");
+          var output=document.getElementById("myGuesses");
+          output.innerHTML += attempts + "."+"greater than" +" "+ text+"<br>";
+        }
+        else if(text>number)
+        {
           alert("You're a little high");
           var output=document.getElementById("myGuesses");
-          output.innerHTML += "greater than" +" "+ text+"<br>";
+          output.innerHTML += attempts + "."+ "less than" +" "+ text+"<br>";
         }
+        else
+        {
+        alert("generate the number!");
+        }
+        if(attempts==10)
+          {
+          alert("your time is up");
+          alert("The number was"+" "+ number +".");
+          setTimeout(window.location.reload(true),3000);
+          }
       }
       
     </script>
   </head>
   <body>
     <h1> Guess the number! </h1>
+    <input type="button" value="Generate Number" onClick="randomNumber()"></input><br><br>
     <input type="text" id="usersays"></input><br>
   <input type="button" value="Guess" onClick="guessTheNumber()"></input>
+  <input type="button" value="RESTART" onclick="window.location.reload(true)"></input>
   <p id="myGuesses"></p>
   </body>
 </html>
