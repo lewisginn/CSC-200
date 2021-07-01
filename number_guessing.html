@@ -18,7 +18,7 @@
        
         if(text==number)
         {
-          alert("CONGRGATS!");
+          alert("CONGRATS!");
           var output=document.getElementById("myGuesses");
           output.innerHTML += attempts + "."+ "The answer was" +" "+ text+"<br>";
           window.location.reload(true);
@@ -45,6 +45,7 @@
           alert("The number was"+" "+ number +".");
           setTimeout(window.location.reload(true),3000);
           }
+        textTag.value="";
       }
       
     </script>
