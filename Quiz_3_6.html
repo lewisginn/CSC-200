@@ -8,13 +8,13 @@
         clearInterval(grow);
         setInterval(Grow,5000);
       }
-      <body onload="setInterval(Grow,5000)">
       function Grow(){
         document.getElementById("poo").write='<img src="bad_taxidermy.jpg" width="500" height="600">';
       }
     </script>
   </head>
   <body>
+     <body onload="setInterval(Grow,5000)">
     <h1>
     <input type="button" value="reset image spam" onClick="resetGrow()"></input><br>
     </h1>
