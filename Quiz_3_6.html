@@ -3,7 +3,7 @@
     <style>
     </style>
     <script>
-      
+      var grow = setInterval(Grow,5000)
       function resetGrow(){
         clearInterval(grow);
         setInterval(Grow,5000);
@@ -14,7 +14,6 @@
     </script>
   </head>
   <body>
-     <body onload="setInterval(Grow,5000)">
     <h1>
     <input type="button" value="reset image spam" onClick="resetGrow()"></input><br>
     </h1>
