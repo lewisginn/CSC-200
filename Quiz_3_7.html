@@ -4,11 +4,13 @@
     </style>
     <script>
       function change(){
-        getElementById(color).color="red"
+        tmp=getElementById(color)
+        tmp.style.color="red"
       }
       
       function Font(x){
-      getElementByClassName(font).style.font.size=x;
+      yee=getElementByClassName(font);
+      yee.style.font.size=x;
       }
     </script>
   </head>
