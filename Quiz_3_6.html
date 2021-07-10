@@ -3,12 +3,12 @@
     <style>
     </style>
     <script>
-      var grow = setInterval(Grow,5000);
+      
       function resetGrow(){
         clearInterval(grow);
         setInterval(Grow,5000);
       }
-      
+      <body onload="setInterval(Grow,5000)">
       function Grow(){
         document.getElementById("poo").innerHTML='<img src="bad_taxidermy.jpg" width="500" height="600">';
       }
