@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+            class Wolf
+            {
+                constructor()
+                {
+     
+                }
+            }
+                Wolf.prototype.MakeSound=function()
+                {
+                    let x=math.floor(math.random)
+                    if(x<.5)
+                    {
+                        alert("woof")
+                    }
+                    else
+                    {
+                       alert("roor")
+                    }
+                }
+                Wolf.prototype.GetPicture=function()
+                {
+                    document.getElementById("getwolf").innerHTML=('<img src="https://wildlife.org/wp-content/uploads/2021/01/Wolves-pumas-1.jpg" width="300" height="200">')
+                }
+                function getpicture(){
+                    let v1= new Wolf()
+                    let v2= Wolf.GetPicture
+                }
+                function makeNoise()
+                {
+                    let v1= new Wolf()
+                    let v2= ye.Makesound
+                }
+        </script>
+    </head>
+    <body>
+        <h1 id="picture">
+            <br>
+        </h1>
+        <input type="button" value="getwolf" onClick="getpicture()"></input>
+        <input type="button" value="make a Noise!" onClick="makeNoise()"></input>
+    </body>
+</html>
