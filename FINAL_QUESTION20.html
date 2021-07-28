@@ -1,0 +1,82 @@
+<html>
+    <head>
+    <style>
+
+    </style>
+    <script>
+        var clock1;
+        var now;
+        var seconds;
+        var minutes;
+        var hours;
+        function loader()
+        {
+            var can = document.getElementById("blackSquare")
+            can.style.width = 400;
+            can.style.height = 400;
+            can.style.backgroundColor = "#000000";
+            clock1= new clock("digital");
+            ticker=setInterval(time(),1000);
+        }
+        function time(){
+        now= new Date();
+        seconds = now.getSeconds();
+        minutes =now.getMinutes();
+        hours = now.getHours();
+        }
+        class clock{
+        constructor(x)
+        {
+        var ticker = setInterval(time(),1000);
+        function time(){
+        now= new Date();
+        this.seconds = now.getSeconds();
+        this.minutes =now.getMinutes();
+        this.hours = now.getHours();
+        this.id=x
+        if (this.id="digital")
+        {
+            var digitals=clock1.digital();
+        }
+        }
+        }
+        
+        }
+        clock.prototype.digital=function ()
+        {
+            if(this.hours<13)
+                {
+                    if (this.minutes<10)
+                document.getElementById(this.id).innerHTML = this.hours+":"+"0"+this.minutes+":"+this.seconds+" a.m.";
+                    else{
+                        document.getElementById(this.id).innerHTML = this.hours+":"+this.minutes+":"+this.seconds+" a.m.";
+                    }
+                }
+                else
+                {
+                    if(this.minutes<10)
+                    {
+                    document.getElementById(this.id).innerHTML = (this.hours-12)+":"+"0"+this.minutes+":"+this.seconds+" p.m";
+                    }
+                    else{
+                    document.getElementById(this.id).innerHTML = (this.hours-12)+":"+this.minutes+":"+this.seconds+" p.m.";    
+                    }
+                    
+                }
+
+        }
+        clock.prototype.hands =function ()
+        {
+        }
+
+    </script>
+    </head>
+    <body onload="loader()">
+        <canvas id="blackSquare">
+    
+        </canvas>
+        <p id="digital">
+    
+        </p>
+    </body>
+</html>
