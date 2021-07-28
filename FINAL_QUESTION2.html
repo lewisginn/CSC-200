@@ -5,10 +5,12 @@
         </style>
         <script>
             alert("read.");
-            document.getElementById("yeet").style.color = #ff5522;
+            function loader(){
+            document.getElementById("yeet").style.color = "red";
+            }
         </script>
     </head>
-    <body>
+    <body onload="loader()">
         <p id="yeet">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
         Habitasse platea dictumst quisque sagittis purus sit amet. Et ultrices neque ornare aenean euismod elementum. <br> 
