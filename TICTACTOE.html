@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+            var moveCounter=0;
+            function resetgame(){location.reload()}
+            function playerMove(THIS)
+            {
+                moveCounter++
+                var Xmarker=THIS.parentElement
+                Xmarker.innerHTML="X"
+                if(moveCounter==1)
+                {
+                    Omarker1=Math.floor(Math.random()*9)
+                    
+                    while(Omarker1==Xmarker){
+                    Omarker1=Math.floor(Math.random()*9)
+                    if(Omarker1==0){Omarker4=Math.floor(Math.random()*9)}
+                    }
+                    document.getElementById(""+Omarker1).innerHTML="O"
+                    moveCounter++
+                }
+                if(moveCounter==3)
+                {
+                    Omarker2=Math.floor(Math.random()*9)
+                    
+                    while(Omarker2==Xmarker){
+                    Omarker2=Math.floor(Math.random()*9)
+                    while(Omarker2==0){Omarker4=Math.floor(Math.random()*9)}
+                    }
+                    document.getElementById(""+Omarker2).innerHTML="O"
+                    moveCounter++
+                }
+                if(moveCounter==5)
+                {
+                    Omarker3=Math.floor(Math.random()*9)
+                    
+                    while(Omarker3==Xmarker){
+                    Omarker3=Math.floor(Math.random()*9)
+                    while(Omarker3==0){Omarker3=Math.floor(Math.random()*9)}
+                    }
+                    document.getElementById(""+Omarker3).innerHTML="O"
+                    moveCounter++
+                }
+                if(moveCounter==7)
+                {
+                    Omarker4=Math.floor(Math.random()*9)
+                    
+                    while(Omarker4==Xmarker){
+                    Omarker4=Math.floor(Math.random()*9)
+                    while(Omarker4==0){Omarker4=Math.floor(Math.random()*9)}
+                    }
+                    document.getElementById(""+Omarker4).innerHTML="O"
+                    moveCounter++
+                }
+                if(moveCounter>=10){alert("game over please reset page")}
+                function winCondition()
+                {
+                    var posWins=[[1,2,3],[1,4,7],[1,5,9],[2,5,8],[3,6,9],[7,8,9],[4,5,6]]
+                    for(let i=0;i++;i<posWins.length)
+                    {
+                        // i dont know what to do here. I want it to check each of these arrays to see if they are true within the table and if they are then itll say an alert of congrats to the player that wins.
+                        //checking all of the id's of each button to see if there are 3 X's in any of the win condition arrays.
+                        //also how would you get the computer to not write over my moves?
+                        //bad words
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <table>
+        <tr>
+            <td id="1"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+            <td id="2"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+            <td id="3"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+        </tr>
+        <tr>
+            <td id="4"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+            <td id="5"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+            <td id="6"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+        </tr>
+        <tr>
+            <td id="5"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+            <td id="8"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+            <td id="9"><input type="button" onclick="playerMove(this)" value="()"></input></td>
+        </tr>
+    </table>
+    <input type="button" value="reset"onclick="resetgame()"></input>
+    </body>
+</html>
