@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script>
+    var gpa=0
+    var classes=0
+     var grades=0
+     function calculator(x)
+      {
+        classes++'
+        grades+=x;
+        gpa=grades/classes;
+        gpawriter();
+      }
+      function gpawriter()
+      {
+        document.getElementById("PISS").innerHTML+= gpa;
+      }
+      function showGPA()
+      {
+        alert("youre gpa is"+gpa);
+      }
+     function reset()
+      {
+       window.location.reload();
+      }
+    </script>
+    <style>
+    </style>
+   </head>
+   <body>
+    <input type="button" value="A" onclick="calculator(4)"></input>
+    <input type="button" value="B" onclick="calculator(3)"></input>
+    <input type="button" value="C" onclick="calculator(2)"></input>
+    <input type="button" value="D" onclick="calculator(1)"></input>
+    <input type="button" value="F" onclick="calculator(0)"></input><br>
+    <input type="button" value="RESET" onclick="reset()"></input>
+    <p id="PISS"></p>
+   </body>
+</html>
