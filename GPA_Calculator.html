@@ -1,9 +1,14 @@
 <html>
   <head>
     <script>
-    var gpa=0
-    var classes=0
-     var grades=0
+    var gpa=0;
+    var classes=0;
+    var grades=0;
+    var A=4;
+    var B=3;
+    var C=2;
+    var D=1;
+    var F=0;
      function calculator(x)
       {
         classes++;
@@ -13,7 +18,7 @@
       }
       function gpawriter(x)
       {
-        document.getElementById("PISS").innerHTML+= "x <br>";
+        document.getElementById("PISS").innerHTML+= x <br>;
       }
       function showGPA()
       {
@@ -28,11 +33,11 @@
     </style>
    </head>
    <body>
-    <input type="button" value="A" onclick="calculator(4)"></input>
-    <input type="button" value="B" onclick="calculator(3)"></input>
-    <input type="button" value="C" onclick="calculator(2)"></input>
-    <input type="button" value="D" onclick="calculator(1)"></input>
-    <input type="button" value="F" onclick="calculator(0)"></input><br>
+    <input type="button" value="A" onclick="calculator(A)"></input>
+    <input type="button" value="B" onclick="calculator(B)"></input>
+    <input type="button" value="C" onclick="calculator(C)"></input>
+    <input type="button" value="D" onclick="calculator(D)"></input>
+    <input type="button" value="F" onclick="calculator(F)"></input><br>
     <input type="button" value="RESET" onclick="reset()"></input><br>
     <input type="button" value="SHOW ME" onclick=showGPA()></input>
     <p id="PISS"></p>
